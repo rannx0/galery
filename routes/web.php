@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ImageGalleryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('image-gallery', 'ImageGalleryController@index');
-Route::post('image-gallery', 'ImageGalleryController@upload');
-Route::delete('image-gallery/{id}', 'ImageGalleryController@destroy');
+Route::get('image-gallery', 'App\Http\Controllers\ImageGalleryController@index');
+Route::post('image-gallery', 'App\Http\Controllers\ImageGalleryController@create');
+Route::delete('image-gallery/{id}', 'App\Http\Controllers\ImageGalleryController@destroy');
