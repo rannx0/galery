@@ -82,7 +82,7 @@
 
 
     <div class="row">
-    <div class='list-group gallery'>
+        <div class='list-group gallery'>
 
 
             @if($images->count())
